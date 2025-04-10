@@ -320,6 +320,10 @@ p {
 .author_details .author_article_box .item:last-child {
   margin-bottom: 0;
 }
+.author_details .author_article_box .item:hover .article_img img {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
 .author_details .author_article_box .article_img img {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -333,6 +337,7 @@ p {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 25px;
+  color: #222222;
 }
 .author_details .author_article_box .article_text p {
   margin-bottom: 15px;
@@ -340,10 +345,6 @@ p {
 .author_details .author_article_box .article_text .date {
   color: #737177;
   font-weight: 500;
-}
-.author_details .author_article_box:hover .article_img img {
-  -webkit-transform: scale(1.06);
-          transform: scale(1.06);
 }
 
 .dashboard {
