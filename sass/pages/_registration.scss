@@ -1,0 +1,96 @@
+.registration {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+
+  .registration_main {
+    border: 1px solid $border;
+    border-radius: 14px;
+    overflow: hidden;
+    background: $white;
+
+    .top_header {
+      background: $primary;
+      padding: 30px;
+
+      .title {
+        font-size: 36px;
+        font-weight: 600;
+      }
+    }
+
+    .main_body {
+      padding: 30px;
+
+      .form-group {
+        margin-bottom: 10px;
+
+        .form-label {
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .form-control {
+          height: 45px;
+          border: 1px solid $border;
+          font-size: 15px;
+          font-weight: 400;
+          transition: $transition;
+
+          &:focus {
+            border-color: $black;
+          }
+        }
+
+        .textarea {
+          min-height: 120px;
+        }
+
+        input[type="file"] {
+          line-height: 31px;
+        }
+      }
+
+      .btn-block {
+        position: relative;
+        color: #fff;
+        background-color: $primary;
+        border-color: $primary;
+        transition: .5s;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 9;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -1px;
+          bottom: -1px;
+          z-index: -1;
+          width: 50%;
+          background: inherit;
+          transform: translateX(-50%);
+          opacity: 0;
+          border-radius: inherit;
+          transition: inherit;
+          pointer-events: none;
+        }
+
+        &:hover {
+          background: transparent;
+          border-color: transparent;
+
+          &::before {
+            width: 100%;
+            background-color: $black;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
