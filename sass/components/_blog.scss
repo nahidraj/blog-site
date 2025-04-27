@@ -1,0 +1,251 @@
+.single_blog_item {
+  .img {
+    margin-bottom: 15px;
+
+    img {
+      transition: $transition;
+    }
+
+    .more_info {
+      bottom: 6px;
+      right: 6px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 5px 8px;
+        border-radius: 3px;
+        position: relative;
+
+        li {
+          color: $black;
+          font-size: 14px;
+          font-family: $poppins;
+          display: flex;
+          align-items: center;
+          transition: $transition;
+          position: relative;
+
+          i {
+            font-size: 12px;
+            color: $black;
+            margin-right: 8px;
+          }
+
+          li {
+            &::before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 0;
+              width: 1px;
+              height: 15px;
+              background: $black;
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    text-align: center;
+
+    .blog_title {
+      margin-top: 15px;
+
+      a {
+        color: $black;
+        font-size: 22px;
+        font-weight: 700;
+
+        &:hover {
+          color: $paragraph;
+        }
+      }
+
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  &:hover {
+    .img {
+      img {
+        transform: scale(1.1) rotate(2deg);
+      }
+    }
+  }
+
+  &.layout_2 {
+    .text {
+      .blog_title {
+        a {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.blog-meta {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+
+    li {
+      a {
+        color: $color2;
+        font-size: 14px;
+        font-family: $poppins;
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 12px;
+          color: $color3;
+          margin-right: 8px;
+        }
+
+        &:hover {
+          color: $color3;
+        }
+      }
+    }
+  }
+}
+
+.blog_title {
+  a {
+    background-image: linear-gradient(transparent calc(100% - 1px), $color3);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+
+
+    &:hover {
+      background-size: 100%;
+    }
+  }
+}
+
+.blog_sidebar_area {
+  .blog_widget {
+    margin-bottom: 40px;
+
+    .widget_title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $black;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: $black;
+        content: "";
+      }
+    }
+
+    .categories {
+      ul {
+        li {
+          padding-bottom: 20px;
+
+          a {
+            color: $color3;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 20px;
+
+            &::before {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background: $black;
+              content: "";
+              transition: $transition;
+            }
+
+            &:hover {
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.newsletter {}
+  }
+}
+
+.sm_blog_post {
+  .blog_post_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    .img {
+      width: 100px;
+      flex: 0 0 auto;
+      overflow: hidden;
+
+      img {
+        transition: $transition;
+      }
+    }
+
+    .text {
+      flex-grow: 1;
+
+      .title {
+        font-weight: 500;
+        font-size: 16px;
+        color: $black;
+      }
+
+      span {
+        color: $color2;
+        font-size: 14px;
+        font-family: $poppins;
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        i {
+          font-size: 12px;
+          color: $color3;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &:hover {
+      .img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

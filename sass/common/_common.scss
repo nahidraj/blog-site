@@ -12,11 +12,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6,p {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
+
 
 span {
   display: inline-block;
@@ -47,9 +48,11 @@ body {
   overflow-x: hidden;
   font-size: 16px;
   font-weight: 400;
+  line-height: 160%;
   color: $black;
   line-height: normal;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background: #F8F8F8;
 }
 
 ::selection {
@@ -62,6 +65,10 @@ p {
   font-weight: 400;
   color: $paragraph;
   line-height: 160%;
+}
+.gap_50{
+  margin: 50px 0;
+  border: 1px solid $border;
 }
 
 .theme_btn {
@@ -133,6 +140,14 @@ p {
       transform: translateX(20%);
     }
   }
+}
+
+.box_model {
+  max-width: 1370px;
+  margin: 0 auto;
+  box-shadow: 0px 15px 20px 0px rgba(222, 222, 222, 0.75);
+  background: $white;
+  padding-bottom: 60px;
 }
 
 .mb-30 {

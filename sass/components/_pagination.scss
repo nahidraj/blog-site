@@ -1,0 +1,23 @@
+.pagination{
+  ul{
+    li{
+      a{
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f2f2f2;
+        color: $black;
+        &:hover{
+          background: $black;
+          color: $white;
+        }
+        &.active{
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
