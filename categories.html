@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Categories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="RnaR Space">
+  <link rel="shortcut icon" href="images/Fevicon.png" type="image/x-icon">
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawsome/css/all.min.css">
+  <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <div class="box_model">
+    <!-- header section start -->
+    <section class="top_header_section d-none d-md-block">
+      <div class="container">
+        <div class="row header_main position-relative d-flex align-items-center">
+          <div class="col-md-4">
+            <div class="left_bar">
+              <button class="sidebar_btn d-flex flex-column bg-transparent border-0">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="middle_bar text-center">
+              <div class="logo">
+                <a href="index.html">
+                  <img src="images/logo.png" alt="logo" width="250">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="right_bar d-flex justify-content-end align-items-center gap-3">
+              <button class="search bg-transparent border-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                  <path d="M21 21l-6 -6" /></svg>
+              </button>
+              <a href="signup.html">Signup</a>
+            </div>
+          </div>
+          <div class="header_search_box position-absolute start-0 w-100 bg-white align-items-center">
+            <div class="seach_box flex-grow-1">
+              <form action="#">
+                <div class="input position-relative">
+                  <input type="text" placeholder="Search here...">
+                  <button type="submit"
+                    class="border-0 bg-transparent position-absolute top-50 translate-middle-y end-0 d-flex align-items-center justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                      <path d="M21 21l-6 -6" /></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <button class="close_box bg-transparent border-0 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- menu section -->
+    <div id="header-fixed-height"></div>
+    <header class="header_section" id="sticky-header">
+      <nav class="d-none d-md-block">
+        <ul class="menus list-unstyled d-flex justify-content-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="author.html">Author</a></li>
+          <li><a href="archive.html">Archive</a></li>
+        </ul>
+      </nav>
+      <!-- mobile navbar part start -->
+      <div class="mobile-menu-area d-block d-md-none">
+        <div class="container">
+          <div class="mobile-topbar">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <a href="index.html"><img width="220" src="images/logo.png" alt="logo"></a>
+              </div>
+              <div class="bars">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-main">
+          <div class="logo">
+            <a href="index.html"><img width="220" src="images/logo.png" alt="logo"></a>
+          </div>
+          <div class="close-mobile-menu"><i class="fas fa-times"></i></div>
+          <div class="form">
+            <form action="#">
+              <div class="input position-relative">
+                <input type="text" placeholder="Search here...">
+                <button type="submit"
+                  class="border-0 bg-transparent position-absolute top-50 translate-middle-y end-0 d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="menu-body">
+            <div class="menu-list">
+              <ul class="list-unstyled">
+                <li class="sub-mobile-menu">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="about.html">About</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="categories.html">Categories</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="blog.html">Blogs</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="author.html">Author</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="archive.html">Archive</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="signup.html">Sign Up</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-info pt-4 px-3 pb-5">
+
+          </div>
+        </div>
+      </div>
+      <!-- mobile navbar part end -->
+    </header>
+    <!-- offcanvas section -->
+    <div class="offcanvas_overlay"></div>
+    <section class="offcanvas_section">
+      <div class="logo text-center">
+        <a href="index.html">
+          <img src="images/logo.png" alt="logo" class="img-fluid w-100">
+        </a>
+      </div>
+      <div class="contact_info">
+        <ul class="list-unstyled text-center">
+          <li>Valentin, Street Road 24, New York, USA - 67452</li>
+          <li>
+            <a href="tel:+02574-328-301">+02) 574 - 328 - 301</a> <br>
+            <a href="mailto:">info@rebrandexample.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social_info text-center">
+        <h4 class="title">Follow Us</h4>
+        <ul class="list-unstyled d-flex justify-content-center gap-4">
+          <li class="d-inline-block">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- header section end -->
+    <!-- main area start -->
+    <main>
+      <!-- Breadcrumb area start -->
+      <section class="breadcrumb_section">
+        <div class="container">
+          <h1 class="page_title">Categories</h1>
+          <ul class="list-unstyled bread_crumb">
+            <li><a href="#">Home</a></li>
+            <li>Categories</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Breadcrumb area end -->
+      <!-- categories area start -->
+      <section class="categories_section mt-40">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-1.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Beauty
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-2.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Food
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-3.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Lifestyle
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-4.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Travel
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-5.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Technology
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-3.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Lifestyle
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-4.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Travel
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="single_blog_item">
+                <div class="img overflow-hidden position-relative">
+                  <a href="blog-details.html" class="d-block w-100">
+                    <img src="images/cat-img-5.png" alt="cat-img" class="img-fluid w-100">
+                  </a>
+                </div>
+                <div class="text">
+                  <h4 class="blog_title">
+                    <a href="blog-detals.html">Technology
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination mt-60">
+            <ul class="list-unstyled d-flex flex-wrap w-100 align-items-center justify-content-center gap-1">
+              <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
+              <li><a class="active" href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- categories area end -->
+    </main>
+  </div>
+  <!-- main area end -->
+  <!-- Back to top button start -->
+  <button class="scroll-to-top position-fixed">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <!-- Back to top button end -->
+  <!-- footer section start -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="about_info">
+            <div class="logo mb-4">
+              <a href="index.html">
+                <img src="images/logo-white.png" alt="logo-white" width="250">
+              </a>
+            </div>
+            <ul class="list-unstyled">
+              <li>Valentin, Street Road 24, New York, <br> USA - 67452</li>
+              <li>
+                <a href="tel:+02574-328-301">+02) 574 - 328 - 301</a> <br>
+                <a href="mailto:">info@rebrandexample.com</a>
+              </li>
+            </ul>
+            <div class="footer-social-icon">
+              <ul class="list-unstyled">
+                <li class="d-inline-block">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="footer_widget">
+            <h4 class="widget_title text-white">POPULAR POSTS</h4>
+            <div class="sm_blog_post">
+              <a href="blog-details.html" class="d-block w-100">
+                <div class="blog_post_item">
+                  <div class="img">
+                    <img src="images/blog-img-1.png" alt="blog-img" class="img-fluid w-100">
+                  </div>
+                  <div class="text">
+                    <span>
+                      <i class="fas fa-calendar-alt"></i>
+                      28 Apr, 2025
+                    </span>
+                    <h4 class="title">7 Dreamy Places You will...</h4>
+                  </div>
+                </div>
+              </a>
+              <a href="blog-details.html" class="d-block w-100">
+                <div class="blog_post_item">
+                  <div class="img">
+                    <img src="images/blog-img-2.png" alt="blog-img" class="img-fluid w-100">
+                  </div>
+                  <div class="text">
+                    <span>
+                      <i class="fas fa-calendar-alt"></i>
+                      28 Apr, 2025
+                    </span>
+                    <h4 class="title">7 Dreamy Places You will...</h4>
+                  </div>
+                </div>
+              </a>
+              <a href="blog-details.html" class="d-block w-100">
+                <div class="blog_post_item">
+                  <div class="img">
+                    <img src="images/blog-img-3.png" alt="blog-img" class="img-fluid w-100">
+                  </div>
+                  <div class="text">
+                    <span>
+                      <i class="fas fa-calendar-alt"></i>
+                      28 Apr, 2025
+                    </span>
+                    <h4 class="title">7 Dreamy Places You will...</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer_widget newsletter_widget">
+            <h4 class="widget_title text-white">Newsletter</h4>
+            <p>Etiam sed odio dictum, tem velitsollicitudin neque. Donec quis aliquet velit.</p>
+            <form action="#">
+              <div class="input-groups d-flex align-items-center">
+                <input type="email" placeholder="maxvid@info.com" class="w-100 flex-grow-1 border-0">
+                <button type="submit" class="d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        <p>© 2025 Wiser Thoughts. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end -->
+
+
+  <!-- all js link -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

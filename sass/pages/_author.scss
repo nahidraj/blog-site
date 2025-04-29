@@ -1,3 +1,25 @@
+.author_section{
+  .author_item{
+    .img{
+      img{
+        transition: $transition;
+      }
+    }
+    .text{
+      .name{
+        color: $black;
+      }
+    }
+    &:hover{
+      .img{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
 .author_details {
   .author_info {
     background: #fff;

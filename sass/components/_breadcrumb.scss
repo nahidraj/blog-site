@@ -1,0 +1,41 @@
+.breadcrumb_section {
+  padding: 60px 0;
+  background: #E5E5E5;
+
+  .page_title {
+    font-size: 34px;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .bread_crumb {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    li {
+      position: relative;
+      color: $black;
+      font-family: $poppins;
+
+      a {
+        color: $black;
+      }
+
+      &::before {
+        content: "/";
+        position: absolute;
+        font-size: 14px;
+        right: -22px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #cccccc;
+      }
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

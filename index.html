@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="fontawsome/css/all.min.css">
   <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,10 +21,10 @@
 <body>
   <div class="box_model">
     <!-- header section start -->
-    <section class="top_header_section">
+    <section class="top_header_section d-none d-md-block">
       <div class="container">
         <div class="row header_main position-relative d-flex align-items-center">
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="left_bar">
               <button class="sidebar_btn d-flex flex-column bg-transparent border-0">
                 <span></span>
@@ -32,7 +33,7 @@
               </button>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="middle_bar text-center">
               <div class="logo">
                 <a href="index.html">
@@ -41,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="right_bar d-flex justify-content-end align-items-center gap-3">
               <button class="search bg-transparent border-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -83,24 +84,242 @@
         </div>
       </div>
     </section>
+    <!-- menu section -->
     <div id="header-fixed-height"></div>
     <header class="header_section" id="sticky-header">
-      <ul class="menus list-unstyled d-flex justify-content-center">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Author</a></li>
-        <li><a href="#">Archive</a></li>
-      </ul>
+      <nav class="d-none d-md-block">
+        <ul class="menus list-unstyled d-flex justify-content-center">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="author.html">Author</a></li>
+          <li><a href="archive.html">Archive</a></li>
+        </ul>
+      </nav>
+      <!-- mobile navbar part start -->
+      <div class="mobile-menu-area d-block d-md-none">
+        <div class="container">
+          <div class="mobile-topbar">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <a href="index.html"><img width="220" src="images/logo.png" alt="logo"></a>
+              </div>
+              <div class="bars">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-main">
+          <div class="logo">
+            <a href="index.html"><img width="220" src="images/logo.png" alt="logo"></a>
+          </div>
+          <div class="close-mobile-menu"><i class="fas fa-times"></i></div>
+          <div class="form">
+            <form action="#">
+              <div class="input position-relative">
+                <input type="text" placeholder="Search here...">
+                <button type="submit"
+                  class="border-0 bg-transparent position-absolute top-50 translate-middle-y end-0 d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="menu-body">
+            <div class="menu-list">
+              <ul class="list-unstyled">
+                <li class="sub-mobile-menu">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="about.html">About</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="categories.html">Categories</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="blog.html">Blogs</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="author.html">Author</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="archive.html">Archive</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="signup.html">Sign Up</a>
+                </li>
+                <li class="sub-mobile-menu">
+                  <a href="login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-info pt-4 px-3 pb-5">
+
+          </div>
+        </div>
+      </div>
+      <!-- mobile navbar part end -->
     </header>
+    <!-- offcanvas section -->
+    <div class="offcanvas_overlay"></div>
+    <section class="offcanvas_section">
+      <div class="logo text-center">
+        <a href="index.html">
+          <img src="images/logo.png" alt="logo" class="img-fluid w-100">
+        </a>
+      </div>
+      <div class="contact_info">
+        <ul class="list-unstyled text-center">
+          <li>Valentin, Street Road 24, New York, USA - 67452</li>
+          <li>
+            <a href="tel:+02574-328-301">+02) 574 - 328 - 301</a> <br>
+            <a href="mailto:">info@rebrandexample.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social_info text-center">
+        <h4 class="title">Follow Us</h4>
+        <ul class="list-unstyled d-flex justify-content-center gap-4">
+          <li class="d-inline-block">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li class="d-inline-block">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
     <!-- header section end -->
     <!-- main area start -->
     <main>
       <!-- banner section start -->
       <section class="banner_section">
         <div class="container">
-
+          <div class="blog_banner_slider">
+            <div class="single_blog_item layout_2">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="img overflow-hidden position-relative">
+                    <a href="blog-details.html" class="d-block w-100">
+                      <img src="images/blog-img-4.png" alt="blog-img" class="img-fluid w-100">
+                    </a>
+                    <div class="more_info position-absolute">
+                      <ul class="list-unstyled">
+                        <li>
+                          <i class="far fa-comment"></i>
+                          5
+                        </li>
+                        <li>
+                          <i class="far fa-eye"></i>
+                          50
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                  <div class="text">
+                    <div class="blog-meta">
+                      <ul class="list-unstyled">
+                        <li><a href="#">
+                            <i class="fa fa-user"></i>
+                            Br Simmons
+                          </a></li>
+                        <li><a href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            28 Apr, 2025
+                          </a></li>
+                        <li><a href="#">
+                            <i class="fas fa-tag"></i>
+                            Food
+                          </a></li>
+                      </ul>
+                    </div>
+                    <h4 class="blog_title">
+                      <a href="blog-detals.html">What Your Holiday Capsule Wardrobe Contain
+                      </a>
+                    </h4>
+                    <p>Aliquam erat volutpat. Curabitur venenatis massa sed lacus tristique, non auctor nisl sodales
+                      Sed
+                      ultricies lacus ut libero faucibus fringilla. In risus magna vel. Aliquam erat volutpat
+                      Curabitur
+                      venenatis massa tiquenon auctor nisl sodales. nisl sodales Sed ultricies lacus ut libero.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="single_blog_item layout_2">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="img overflow-hidden position-relative">
+                    <a href="blog-details.html" class="d-block w-100">
+                      <img src="images/blog-img-6.png" alt="blog-img" class="img-fluid w-100">
+                    </a>
+                    <div class="more_info position-absolute">
+                      <ul class="list-unstyled">
+                        <li>
+                          <i class="far fa-comment"></i>
+                          5
+                        </li>
+                        <li>
+                          <i class="far fa-eye"></i>
+                          50
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                  <div class="text">
+                    <div class="blog-meta">
+                      <ul class="list-unstyled">
+                        <li><a href="#">
+                            <i class="fa fa-user"></i>
+                            Br Simmons
+                          </a></li>
+                        <li><a href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            28 Apr, 2025
+                          </a></li>
+                        <li><a href="#">
+                            <i class="fas fa-tag"></i>
+                            Food
+                          </a></li>
+                      </ul>
+                    </div>
+                    <h4 class="blog_title">
+                      <a href="blog-detals.html">What Your Holiday Capsule Wardrobe Contain
+                      </a>
+                    </h4>
+                    <p>Aliquam erat volutpat. Curabitur venenatis massa sed lacus tristique, non auctor nisl sodales
+                      Sed
+                      ultricies lacus ut libero faucibus fringilla. In risus magna vel. Aliquam erat volutpat
+                      Curabitur
+                      venenatis massa tiquenon auctor nisl sodales. nisl sodales Sed ultricies lacus ut libero.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- banner section end -->
@@ -108,7 +327,7 @@
       <section class="blog_section mt-40">
         <div class="container">
           <div class="row g-4">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
               <div class="single_blog_item">
                 <div class="img overflow-hidden position-relative">
                   <a href="blog-details.html" class="d-block w-100">
@@ -151,7 +370,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
               <div class="single_blog_item">
                 <div class="img overflow-hidden position-relative">
                   <a href="blog-details.html" class="d-block w-100">
@@ -194,7 +413,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
               <div class="single_blog_item">
                 <div class="img overflow-hidden position-relative">
                   <a href="blog-details.html" class="d-block w-100">
@@ -244,8 +463,8 @@
       <!-- blog section start -->
       <section class="blog_section mt-40">
         <div class="container">
-          <div class="row g-4 gx-5">
-            <div class="col-lg-9">
+          <div class="row g-4 gx-xxl-5">
+            <div class="col-lg-8 col-xl-9">
               <div class="row g-4">
                 <div class="col-lg-12">
                   <div class="single_blog_item layout_2">
@@ -297,7 +516,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <div class="single_blog_item">
                     <div class="img overflow-hidden position-relative">
                       <a href="blog-details.html" class="d-block w-100">
@@ -342,7 +561,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <div class="single_blog_item">
                     <div class="img overflow-hidden position-relative">
                       <a href="blog-details.html" class="d-block w-100">
@@ -387,7 +606,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <div class="single_blog_item">
                     <div class="img overflow-hidden position-relative">
                       <a href="blog-details.html" class="d-block w-100">
@@ -432,7 +651,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <div class="single_blog_item">
                     <div class="img overflow-hidden position-relative">
                       <a href="blog-details.html" class="d-block w-100">
@@ -488,7 +707,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3">
               <div class="blog_sidebar_area">
                 <div class="blog_widget">
                   <h4 class="widget_title">POPULAR POSTS </h4>
@@ -622,9 +841,11 @@
                   </div>
                 </div>
                 <div class="blog_widget ads">
-                  <div class="img">
-                    <img src="images/ads.jpg" alt="ads" class="img-fluid w-100">
-                  </div>
+                  <a href="#" class="d-block w-100" target="_blank">
+                    <div class="img">
+                      <img src="images/ads.jpg" alt="ads" class="img-fluid w-100">
+                    </div>
+                  </a>
                 </div>
                 <div class="blog_widget">
                   <h4 class="widget_title">CATEGORIES</h4>
@@ -643,8 +864,15 @@
                     </ul>
                   </div>
                 </div>
-                <div class="newsletter">
-
+                <div class="blog_widget newsletter">
+                  <h3 class="title">Get Latest Updates</h3>
+                  <p>Newsletter Subscribe</p>
+                  <form action="#">
+                    <div class="input_group">
+                      <input type="text" placeholder="Your email address">
+                    </div>
+                    <button type="submit">Subscribe</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -655,8 +883,8 @@
       <!-- instagrame feed section start -->
       <hr class="gap_50">
       <section class="instagrame_feed_section mt-50">
-        <div class="container">
-          <div class="row g-2 row-cols-lg-6">
+        <div class="container position-relative">
+          <div class="row g-2 row-cols-lg-6 row-cols-md-4 row-cols-sm-3 row-cols-2">
             <div class="col-lg">
               <div class="img overflow-hidden">
                 <a href="#" class="d-block w-100">
@@ -742,27 +970,59 @@
               </div>
             </div>
           </div>
+          <div class="hover_btn">
+            <a href="#" class="theme_btn">POPULAR AUTHORS</a>
+          </div>
         </div>
       </section>
       <!-- instagrame feed section end -->
     </main>
   </div>
   <!-- main area end -->
+  <!-- Back to top button start -->
+  <button class="scroll-to-top position-fixed">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <!-- Back to top button end -->
   <!-- footer section start -->
-
   <footer class="footer_section">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6">
           <div class="about_info">
             <div class="logo mb-4">
               <a href="index.html">
                 <img src="images/logo-white.png" alt="logo-white" width="250">
               </a>
             </div>
+            <ul class="list-unstyled">
+              <li>Valentin, Street Road 24, New York, <br> USA - 67452</li>
+              <li>
+                <a href="tel:+02574-328-301">+02) 574 - 328 - 301</a> <br>
+                <a href="mailto:">info@rebrandexample.com</a>
+              </li>
+            </ul>
+            <div class="footer-social-icon">
+              <ul class="list-unstyled">
+                <li class="d-inline-block">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6">
           <div class="footer_widget">
             <h4 class="widget_title text-white">POPULAR POSTS</h4>
             <div class="sm_blog_post">
@@ -818,14 +1078,16 @@
             <form action="#">
               <div class="input-groups d-flex align-items-center">
                 <input type="email" placeholder="maxvid@info.com" class="w-100 flex-grow-1 border-0">
-                <button type="submit"
-                  class="d-flex align-items-center justify-content-center flex-shrink-0">
+                <button type="submit" class="d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="fas fa-paper-plane"></i>
                 </button>
               </div>
             </form>
           </div>
         </div>
+      </div>
+      <div class="copyright text-center">
+        <p>© 2025 Wiser Thoughts. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -835,6 +1097,7 @@
   <!-- all js link -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

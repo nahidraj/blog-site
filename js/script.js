@@ -1,6 +1,13 @@
 $(function () {
   "use strict";
 
+  $(".sidebar_btn").on("click", function () {
+    $(".offcanvas_overlay, .offcanvas_section").addClass("show")
+  });
+  $(".offcanvas_overlay").on("click", function () {
+    $(".offcanvas_overlay, .offcanvas_section").removeClass("show")
+  });
+
   $(".search").on("click", function () {
     $(".header_search_box")
       .css("display", "flex") // 👈 set flex first
@@ -25,24 +32,57 @@ $(function () {
     }
   });
 
+  // Back to top js
+  let btn = $(".scroll-to-top");
+
+  $(window).scroll(function () {
+    btn.toggleClass("show", $(window).scrollTop() > 300);
+  });
+
+  btn.click(function (e) {
+    e.preventDefault();
+    if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
+      $("html").animate({
+          scrollTop: 0,
+        },
+        1000
+      );
+    } else {
+      $("html, body").animate({
+          scrollTop: 0,
+        },
+        0
+      );
+    }
+  });
   // // full page loader js
   // $(".fullpage_loader").fadeOut("slow", function () {
   //   $(this).remove();
   // });
 
-  // // banner slider js
-  // $(".banner_slider").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 4000,
-  //   speed: 800,
-  //   arrows: true,
-  //   dots: false,
-  //   prevArrow: '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon arrow arrow_left icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>',
-  //   nextArrow: '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon arrow arrow_right icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>',
-  // }).slickAnimation();
+  // banner blog slider js
+  $(".blog_banner_slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 1200,
+    arrows: true,
+    dots: false,
+    prevArrow: '<i class="fas fa-chevron-left arrow left"></i>',
+    nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
+  })
 
+  /*-------------------------------------
+    Counter
+    -------------------------------------*/
+  var counterContainer = $('.counter');
+  if (counterContainer.length) {
+    counterContainer.counterUp({
+      delay: 50,
+      time: 2000
+    });
+  }
   // // masonry layout gallery
   // $(document).ready(function () {
   //   var $masonryLayout = $('.masonry-layout');
@@ -209,19 +249,21 @@ $(function () {
   //   }
   // });
 
-  // // mobile menu js
-  // $(".mobile-topbar .bars").on("click", function () {
-  //   $(".mobile-menu-overlay,.mobile-menu-main").addClass("active");
-  //   return false;
-  // });
+  // Mobile menu js start
+  $(".mobile-topbar .bars").on("click", function () {
+    $(".mobile-menu-overlay,.mobile-menu-main").addClass("active");
+    return false;
+  });
 
-  // $(".close-mobile-menu,.mobile-menu-overlay").on("click", function () {
-  //   $(".mobile-menu-overlay,.mobile-menu-main").removeClass("active");
-  // });
+  $(".close-mobile-menu,.mobile-menu-overlay").on("click", function () {
+    $(".mobile-menu-overlay,.mobile-menu-main").removeClass("active");
+  });
 
-  // $(".sub-mobile-menu ul").hide();
-  // $(".sub-mobile-menu a").on("click", function () {
-  //   $(this).parent(".sub-mobile-menu").children("ul").slideToggle("100");
-  //   $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
-  // });
+  $('.sub-mobile-menu ul').hide();
+  $(".sub-mobile-menu a").on("click", function () {
+    $('.sub-mobile-menu ul').not($(this).next("ul")).slideUp(300);
+    $(".sub-mobile-menu a i").not($(this).find("i")).removeClass("fa-chevron-up").addClass("fa-chevron-down");
+    $(this).next("ul").slideToggle(300);
+    $(this).find("i").toggleClass("fa-chevron-up fa-chevron-down");
+  });
 });
