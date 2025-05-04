@@ -13,8 +13,14 @@
         margin-bottom: 15px;
         border: 1px solid $border;
         padding: 16px;
-        max-width:400px;
+        max-width: 480px;
         width: 100%;
+
+        @media (max-width:991.98px) {
+          float: unset;
+          max-width: 100%;
+          margin-left: 0;
+        }
 
         img {
           width: 100%;
@@ -88,6 +94,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  @media (max-width:991px) {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 .progress-box-layout1 .counter-text {

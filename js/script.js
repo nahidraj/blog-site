@@ -71,6 +71,7 @@ $(function () {
     dots: false,
     prevArrow: '<i class="fas fa-chevron-left arrow left"></i>',
     nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
+    
   })
 
   // banner blog slider js
@@ -84,6 +85,20 @@ $(function () {
     dots: true,
     prevArrow: '<i class="fas fa-chevron-left arrow left"></i>',
     nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   })
 
   /*-------------------------------------
