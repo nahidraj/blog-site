@@ -87,6 +87,7 @@
       .blog_title {
         a {
           font-size: 30px;
+
           @media (max-width:575.98px) {
             font-size: 26px;
           }
@@ -101,15 +102,28 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    row-gap: 5px;
     justify-content: center;
 
     li {
+      font-size: 14px;
+      font-family: $poppins;
+      display: flex;
+      align-items: center;
+      color: $color2;
+
+      i {
+        font-size: 12px;
+        color: $color3;
+        margin-right: 8px;
+      }
+
       a {
-        color: $color2;
         font-size: 14px;
         font-family: $poppins;
         display: flex;
         align-items: center;
+        color: $color2;
 
         i {
           font-size: 12px;
@@ -301,9 +315,9 @@
   }
 }
 
-.blog_list_section{
+.blog_list_section {
   .single_blog_item {
-    .img{
+    .img {
       margin-bottom: 0;
     }
   }

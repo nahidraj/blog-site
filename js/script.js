@@ -73,6 +73,19 @@ $(function () {
     nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
   })
 
+  // banner blog slider js
+  $(".link_blog_slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 1200,
+    arrows: false,
+    dots: true,
+    prevArrow: '<i class="fas fa-chevron-left arrow left"></i>',
+    nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
+  })
+
   /*-------------------------------------
     Counter
     -------------------------------------*/

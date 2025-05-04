@@ -1,18 +1,37 @@
-.author_section{
-  .author_item{
-    .img{
-      img{
+.author_section {
+  .author_item {
+    .img {
+      img {
         transition: $transition;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .review {
+        bottom: 6px;
+        right: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 5px 8px;
+        border-radius: 3px;
+        gap: 3px;
+        i{
+          color: $black;
+          font-size: 12px;
+        }
       }
     }
-    .text{
-      .name{
+
+    .text {
+      .name {
         color: $black;
       }
     }
-    &:hover{
-      .img{
-        img{
+
+    &:hover {
+      .img {
+        img {
           transform: scale(1.1);
         }
       }
