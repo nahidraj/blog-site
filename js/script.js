@@ -1,6 +1,13 @@
 $(function () {
   "use strict";
 
+  // loader js
+  $(window).on("load", function () {
+    $(".fullpage_loader").fadeOut("slow", function () {
+      $(this).remove(1000);
+    });
+  });
+  
   $(".sidebar_btn").on("click", function () {
     $(".offcanvas_overlay, .offcanvas_section").addClass("show")
   });

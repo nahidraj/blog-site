@@ -3,6 +3,9 @@
   padding: 40px 0;
 
   .single_blog_item {
+    .img{
+      margin-bottom: 0;
+    }
     .text {
       margin-right: 30px;
       @media (max-width: 991.98px) {
