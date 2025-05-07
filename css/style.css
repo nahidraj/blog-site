@@ -199,7 +199,7 @@ p {
 }
 
 .header_section nav ul li {
-  margin: 0 25px;
+  margin: 0 20px;
 }
 @media (max-width: 991.98px) {
   .header_section nav ul li {
@@ -1287,6 +1287,7 @@ p {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
+  padding: 120px 0;
 }
 .registration .registration_main {
   border: 1px solid #c9c9c9;
@@ -1306,11 +1307,15 @@ p {
   padding: 30px;
 }
 .registration .registration_main .main_body .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .registration .registration_main .main_body .form-group .form-label {
   font-size: 13px;
   font-weight: 600;
+}
+.registration .registration_main .main_body .form-group small {
+  font-size: 13px;
+  font-weight: 500;
 }
 .registration .registration_main .main_body .form-group .form-control {
   height: 45px;
@@ -1328,6 +1333,15 @@ p {
 }
 .registration .registration_main .main_body .form-group input[type=file] {
   line-height: 31px;
+}
+.registration .registration_main .main_body .form-group .input_field .eye_btn {
+  right: 15px;
+}
+.registration .registration_main .main_body .form-group .input_field .eye_btn .show {
+  display: none;
+}
+.registration .registration_main .main_body .form-group .error {
+  border-color: red;
 }
 .registration .registration_main .main_body .btn-block {
   position: relative;

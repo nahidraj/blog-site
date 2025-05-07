@@ -2,6 +2,7 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
+  padding: 120px 0;
 
   .registration_main {
     border: 1px solid $border;
@@ -23,11 +24,16 @@
       padding: 30px;
 
       .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
 
         .form-label {
           font-size: 13px;
           font-weight: 600;
+        }
+
+        small {
+          font-size: 13px;
+          font-weight: 500;
         }
 
         .form-control {
@@ -48,6 +54,20 @@
 
         input[type="file"] {
           line-height: 31px;
+        }
+
+        .input_field {
+          .eye_btn {
+            right: 15px;
+
+            .show {
+              display: none;
+            }
+          }
+        }
+
+        .error {
+          border-color: red;
         }
       }
 
