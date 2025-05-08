@@ -2,12 +2,27 @@
   background: #f5f5f5;
   padding: 40px 0;
 
+  .featured {
+    padding: 12px 30px;
+    color: $black;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #0B5ED7;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
   .single_blog_item {
-    .img{
+    .img {
       margin-bottom: 0;
     }
+
     .text {
       margin-right: 30px;
+
       @media (max-width: 991.98px) {
         margin-right: 0;
       }

@@ -113,4 +113,43 @@
       }
     }
   }
+
+  .dont_have_account {
+    padding: 8px 0;
+
+    a {
+      color: $black;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .login_with {
+    padding: 10px 0 14px 0;
+  }
+
+  .custom_login_btn {
+    padding: 12px 12px;
+    width: 50%;
+    color: $black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .facebook {
+    background: #0B5ED7;
+    color: $white;
+  }
+
+  .google {
+    background: #DB412D;
+    color: $white;
+  }
 }
