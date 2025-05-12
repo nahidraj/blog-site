@@ -215,227 +215,116 @@
       <!-- Breadcrumb area start -->
       <section class="breadcrumb_section">
         <div class="container">
-          <h1 class="page_title">Blog</h1>
           <ul class="list-unstyled bread_crumb">
             <li><a href="index.html">Home</a></li>
-            <li>Blog</li>
+            <li>Contact</li>
           </ul>
         </div>
       </section>
       <!-- Breadcrumb area end -->
-      <!-- blog section start -->
-      <section class="blog_section blog_list_section mt-40">
+      <!-- blog details section start -->
+      <section class="contact_page">
         <div class="container">
           <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="single_blog_item">
-                <div class="row g-4">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="img overflow-hidden position-relative">
-                      <a href="blog-details.html" class="d-block w-100">
-                        <img src="images/blog-img-1.png" alt="blog-img" class="img-fluid w-100">
-                      </a>
-                      <div class="more_info position-absolute">
-                        <ul class="list-unstyled">
-                          <li>
-                            <i class="far fa-comment"></i>
-                            5
-                          </li>
-                          <li>
-                            <i class="far fa-eye"></i>
-                            50
-                          </li>
-                        </ul>
+            <div class="col-lg-8">
+              <div class="contact_box">
+                <div class="contact_form">
+                  <h3 class="title">Send Message</h3>
+                  <form action="assets/mail.php" method="POST" id="contact-form">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="input-group">
+                          <label class="form_label">Name</label>
+                          <input required name="name" type="text" class="form-control shadow-none"
+                            placeholder="Enter your name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-group">
+                          <label class="form_label">Email Address</label>
+                          <input required name="email" type="email" class="form-control shadow-none"
+                            placeholder="Enter your email">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <label class="form_label">Subject</label>
+                          <input required name="subject" type="text" class="form-control shadow-none"
+                            placeholder="Enter your subject">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="input-group">
+                          <label class="form_label">Messages</label>
+                          <textarea required name="message" placeholder="Write your messages"
+                            class="form-control shadow-none textarea"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <button type="submit" class="theme_btn border-0">
+                          Sent Now
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 align-self-center">
-                    <div class="text">
-                      <div class="blog-meta">
-                        <ul class="list-unstyled">
-                          <li><a href="#">
-                              <i class="fa fa-user"></i>
-                              Br Simmons
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-calendar-alt"></i>
-                              28 Apr, 2025
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-tag"></i>
-                              Food
-                            </a></li>
-                        </ul>
-                      </div>
-                      <h4 class="blog_title">
-                        <a href="blog-details.html">Lorem ipsum dolor sit amet consectetur.
-                        </a>
+                  </form>
+                  <p class="ajax-response mb-0"></p>
+                </div>
+                <div class="map mt-5">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.26002810575!2d-74.14431235114544!3d40.69728463488439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1747046324718!5m2!1sen!2sbd"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact_information mt-5">
+                  <ul class="list-unstyled">
+                    <li>
+                      <h4>Office Address
                       </h4>
-                    </div>
-                  </div>
+                      <p>Worem Ipsum Nam nec tellus a odio tincidunt auctor. Proin gravida nibh vel velit auctor
+                        aliquet. Bendum auctor, nisi elit conseq aeuat ipsum, nec sagittis sem nibhety.
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Phone
+                      </h4>
+                      <p>+123 88 9999 00, +123 88 9999 00, +123 88 9999 00
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Mail Us
+                      </h4>
+                      <p>info@gmail.com, info@gmail.com, info@gmail.com,
+                      </p>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="single_blog_item">
-                <div class="row g-4">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="img overflow-hidden position-relative">
-                      <a href="blog-details.html" class="d-block w-100">
-                        <img src="images/blog-img-2.png" alt="blog-img" class="img-fluid w-100">
-                      </a>
-                      <div class="more_info position-absolute">
-                        <ul class="list-unstyled">
-                          <li>
-                            <i class="far fa-comment"></i>
-                            5
-                          </li>
-                          <li>
-                            <i class="far fa-eye"></i>
-                            50
-                          </li>
-                        </ul>
-                      </div>
+            <div class="col-lg-4">
+              <div class="blog_sidebar_area">
+                <div class="blog_widget newsletter">
+                  <h3 class="title">Get Latest Updates</h3>
+                  <p>Newsletter Subscribe</p>
+                  <form action="#">
+                    <div class="input_group">
+                      <input type="text" placeholder="Your email address">
                     </div>
-                  </div>
-                  <div class="col-lg-6 align-self-center">
-                    <div class="text">
-                      <div class="blog-meta">
-                        <ul class="list-unstyled">
-                          <li><a href="#">
-                              <i class="fa fa-user"></i>
-                              Br Simmons
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-calendar-alt"></i>
-                              28 Apr, 2025
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-tag"></i>
-                              Food
-                            </a></li>
-                        </ul>
-                      </div>
-                      <h4 class="blog_title">
-                        <a href="blog-details.html">Lorem ipsum dolor sit amet consectetur.
-                        </a>
-                      </h4>
+                    <button type="submit">Subscribe</button>
+                  </form>
+                </div>
+                <div class="blog_widget ads">
+                  <a href="#" class="d-block w-100" target="_blank">
+                    <div class="img">
+                      <img src="images/ads.jpg" alt="ads" class="img-fluid w-100">
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="single_blog_item">
-                <div class="row g-4">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="img overflow-hidden position-relative">
-                      <a href="blog-details.html" class="d-block w-100">
-                        <img src="images/blog-img-3.png" alt="blog-img" class="img-fluid w-100">
-                      </a>
-                      <div class="more_info position-absolute">
-                        <ul class="list-unstyled">
-                          <li>
-                            <i class="far fa-comment"></i>
-                            5
-                          </li>
-                          <li>
-                            <i class="far fa-eye"></i>
-                            50
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 align-self-center">
-                    <div class="text">
-                      <div class="blog-meta">
-                        <ul class="list-unstyled">
-                          <li><a href="#">
-                              <i class="fa fa-user"></i>
-                              Br Simmons
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-calendar-alt"></i>
-                              28 Apr, 2025
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-tag"></i>
-                              Food
-                            </a></li>
-                        </ul>
-                      </div>
-                      <h4 class="blog_title">
-                        <a href="blog-details.html">Lorem ipsum dolor sit amet consectetur.
-                        </a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="single_blog_item">
-                <div class="row g-4">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="img overflow-hidden position-relative">
-                      <a href="blog-details.html" class="d-block w-100">
-                        <img src="images/blog-img-4.png" alt="blog-img" class="img-fluid w-100">
-                      </a>
-                      <div class="more_info position-absolute">
-                        <ul class="list-unstyled">
-                          <li>
-                            <i class="far fa-comment"></i>
-                            5
-                          </li>
-                          <li>
-                            <i class="far fa-eye"></i>
-                            50
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 align-self-center">
-                    <div class="text">
-                      <div class="blog-meta">
-                        <ul class="list-unstyled">
-                          <li><a href="#">
-                              <i class="fa fa-user"></i>
-                              Br Simmons
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-calendar-alt"></i>
-                              28 Apr, 2025
-                            </a></li>
-                          <li><a href="#">
-                              <i class="fas fa-tag"></i>
-                              Food
-                            </a></li>
-                        </ul>
-                      </div>
-                      <h4 class="blog_title">
-                        <a href="blog-details.html">Lorem ipsum dolor sit amet consectetur.
-                        </a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pagination mt-60">
-            <ul class="list-unstyled d-flex flex-wrap w-100 align-items-center justify-content-center gap-1">
-              <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
-              <li><a class="active" href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
-            </ul>
           </div>
         </div>
       </section>
-      <!-- blog section end -->
+      <!-- blog details section end -->
     </main>
   </div>
   <!-- main area end -->

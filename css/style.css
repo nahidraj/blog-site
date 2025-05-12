@@ -198,6 +198,9 @@ p {
   margin-left: 30px;
 }
 
+.header_section {
+  border-bottom: 1px solid #c9c9c9;
+}
 .header_section nav ul li {
   margin: 0 20px;
 }
@@ -277,7 +280,7 @@ p {
   width: 100%;
   position: fixed;
   top: 0;
-  left: -345px;
+  left: -385px;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   z-index: 9999;
@@ -289,7 +292,7 @@ p {
 @media (max-width: 1199.98px) {
   .offcanvas_section {
     max-width: 300px;
-    left: -300px;
+    left: -380px;
   }
 }
 .offcanvas_section .contact_info {
@@ -631,7 +634,8 @@ p {
           transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: #ffffff;
+  background: #111111;
+  color: #ffffff;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,8 +654,8 @@ p {
   z-index: 9;
 }
 .banner_section .arrow:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #111111;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -994,6 +998,14 @@ p {
           transform: translate(-50%, -50%);
   width: 198px;
 }
+.instagrame_feed_section .hover_btn .theme_btn {
+  background: #111111;
+  color: #ffffff;
+}
+.instagrame_feed_section .hover_btn .theme_btn:hover {
+  background: #ffffff;
+  color: #111111;
+}
 
 .footer_section {
   background: #111111;
@@ -1133,8 +1145,7 @@ p {
 }
 
 .breadcrumb_section {
-  padding: 60px 0;
-  background: #E5E5E5;
+  padding: 20px 0;
 }
 .breadcrumb_section .page_title {
   font-size: 34px;
@@ -1146,6 +1157,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 32px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1154,9 +1168,12 @@ p {
   position: relative;
   color: #111111;
   font-family: "Poppins", sans-serif;
+  font-style: italic;
+  opacity: 0.7;
 }
 .breadcrumb_section .bread_crumb li a {
   color: #111111;
+  opacity: 1;
 }
 .breadcrumb_section .bread_crumb li::before {
   content: "/";
@@ -1362,41 +1379,294 @@ p {
   outline: none;
 }
 
+.contact_page .contact_box .contact_form {
+  background: #f5f5f5;
+  padding: 40px;
+}
+@media (max-width: 575.98px) {
+  .contact_page .contact_box .contact_form {
+    padding: 24px;
+  }
+}
+.contact_page .contact_box .contact_form .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact_page .contact_box .contact_form .input-group .form_label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.contact_page .contact_box .contact_form .input-group .form-control,
+.contact_page .contact_box .contact_form .input-group .form-select {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  border-radius: 10px !important;
+  border: 1px solid #c9c9c9;
+  background: transparent;
+  opacity: 0.8;
+  color: #111111;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  opacity: 1;
+  color: #111111;
+}
+.contact_page .contact_box .contact_form .input-group .form-control::-webkit-input-placeholder, .contact_page .contact_box .contact_form .input-group .form-select::-webkit-input-placeholder {
+  color: #111111;
+  opacity: 0.8;
+}
+.contact_page .contact_box .contact_form .input-group .form-control::-moz-placeholder, .contact_page .contact_box .contact_form .input-group .form-select::-moz-placeholder {
+  color: #111111;
+  opacity: 0.8;
+}
+.contact_page .contact_box .contact_form .input-group .form-control:-ms-input-placeholder, .contact_page .contact_box .contact_form .input-group .form-select:-ms-input-placeholder {
+  color: #111111;
+  opacity: 0.8;
+}
+.contact_page .contact_box .contact_form .input-group .form-control::-ms-input-placeholder, .contact_page .contact_box .contact_form .input-group .form-select::-ms-input-placeholder {
+  color: #111111;
+  opacity: 0.8;
+}
+.contact_page .contact_box .contact_form .input-group .form-control::placeholder,
+.contact_page .contact_box .contact_form .input-group .form-select::placeholder {
+  color: #111111;
+  opacity: 0.8;
+}
+.contact_page .contact_box .contact_form .input-group .form-control:focus,
+.contact_page .contact_box .contact_form .input-group .form-select:focus {
+  background: transparent;
+  border-color: #111111;
+}
+.contact_page .contact_box .contact_form .input-group .form-control option,
+.contact_page .contact_box .contact_form .input-group .form-select option {
+  color: #111111;
+}
+.contact_page .contact_box .contact_form .input-group .form-control.textarea {
+  padding: 15px 20px;
+  height: 140px;
+  border-radius: 10px !important;
+}
+.contact_page .contact_box .contact_form .theme_btn {
+  background: #111111;
+  width: 100%;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.contact_page .contact_box .contact_form .theme_btn:hover {
+  background: #646464;
+}
+.contact_page .contact_box .map {
+  height: 340px;
+}
+.contact_page .contact_box .map iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+.contact_page .contact_box .contact_information ul li {
+  margin-bottom: 30px;
+}
+.contact_page .contact_box .contact_information ul li:last-child {
+  margin-bottom: 0;
+}
+.contact_page .contact_box .contact_information ul li h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .registration {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
-  padding: 120px 0;
+  padding: 60px 0;
 }
-.registration .registration_main {
-  border: 1px solid #c9c9c9;
-  border-radius: 14px;
-  overflow: hidden;
+.registration .main_area {
   background: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 2px 6px 0px #1d2030;
+          box-shadow: 0px 2px 6px 0px #1d2030;
 }
-.registration .registration_main .top_header {
-  background: #111111;
-  padding: 30px;
+.registration .main_area .intro_box {
+  background: #2B304C;
+  height: 100%;
+  padding: 80px 40px;
 }
-.registration .registration_main .top_header .title {
-  font-size: 36px;
+@media (max-width: 991.98px) {
+  .registration .main_area .intro_box {
+    padding: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .registration .main_area .intro_box {
+    padding: 24px;
+  }
+}
+.registration .main_area .intro_box p {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+@media (max-width: 991.98px) {
+  .registration .main_area .intro_box .login_other {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.registration .main_area .intro_box .login_other a {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 14px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .registration .main_area .intro_box .login_other a {
+    width: 49%;
+  }
+}
+@media (max-width: 767.98px) {
+  .registration .main_area .intro_box .login_other a {
+    width: 48.6%;
+  }
+}
+@media (max-width: 575.98px) {
+  .registration .main_area .intro_box .login_other a {
+    width: 100%;
+  }
+}
+.registration .main_area .intro_box .login_other a i {
+  margin-right: 5px;
+}
+.registration .main_area .intro_box .login_other a.fb {
+  background: #1877F2;
+}
+.registration .main_area .intro_box .login_other a.fb:hover {
+  background: #1165d3;
+}
+.registration .main_area .intro_box .login_other a.tw {
+  background: #1DA1F2;
+}
+.registration .main_area .intro_box .login_other a.tw:hover {
+  background: #1484c9;
+}
+.registration .main_area .intro_box .login_other a.gg {
+  background: #DB4437;
+}
+.registration .main_area .intro_box .login_other a.gg:hover {
+  background: #aa3328;
+}
+.registration .main_area .intro_box .login_other a.li {
+  background: #0072b1;
+}
+.registration .main_area .intro_box .login_other a.li:hover {
+  background: #005c8d;
+}
+.registration .main_area .form_box {
+  padding: 40px;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+@media (max-width: 991.98px) {
+  .registration .main_area .form_box {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .registration .main_area .form_box {
+    padding: 24px;
+  }
+}
+.registration .main_area .form_box .top_title {
+  margin-bottom: 30px;
+}
+.registration .main_area .form_box .top_title .title {
+  font-size: 26px;
   font-weight: 600;
 }
-.registration .registration_main .main_body {
-  padding: 30px;
-}
-.registration .registration_main .main_body .form-group {
+.registration .main_area .form_box .custom_file_input .img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   margin-bottom: 8px;
 }
-.registration .registration_main .main_body .form-group .form-label {
+.registration .main_area .form_box .custom_file_input .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+.registration .main_area .form_box .custom_file_input .img .close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: transparent;
+  border: 0;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.registration .main_area .form_box .custom_file_input .img .close svg {
+  stroke: #fff;
+}
+.registration .main_area .form_box .custom_file_input .img:hover .close {
+  visibility: visible;
+  opacity: 1;
+}
+.registration .main_area .form_box .login {
+  color: #111111;
+  text-align: center;
+  font-size: 500;
+}
+.registration .main_area .form_box .login:hover {
+  text-decoration: underline;
+}
+.registration .main_area .form-label {
   font-size: 13px;
   font-weight: 600;
 }
-.registration .registration_main .main_body .form-group small {
+.registration .main_area .form-group {
+  margin-bottom: 12px;
+}
+.registration .main_area .form-group small {
   font-size: 13px;
   font-weight: 500;
 }
-.registration .registration_main .main_body .form-group .form-control {
+.registration .main_area .form-group .form-control {
   height: 45px;
   border: 1px solid #c9c9c9;
   font-size: 15px;
@@ -1404,25 +1674,25 @@ p {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.registration .registration_main .main_body .form-group .form-control:focus {
+.registration .main_area .form-group .form-control:focus {
   border-color: #111111;
 }
-.registration .registration_main .main_body .form-group .textarea {
+.registration .main_area .form-group .textarea {
   min-height: 120px;
 }
-.registration .registration_main .main_body .form-group input[type=file] {
+.registration .main_area .form-group input[type=file] {
   line-height: 31px;
 }
-.registration .registration_main .main_body .form-group .input_field .eye_btn {
+.registration .main_area .form-group .input_field .eye_btn {
   right: 15px;
 }
-.registration .registration_main .main_body .form-group .input_field .eye_btn .show {
+.registration .main_area .form-group .input_field .eye_btn .show {
   display: none;
 }
-.registration .registration_main .main_body .form-group .error {
+.registration .main_area .form-group .error {
   border-color: red;
 }
-.registration .registration_main .main_body .btn-block {
+.registration .main_area .btn-block {
   position: relative;
   color: #fff;
   background-color: #111111;
@@ -1430,13 +1700,13 @@ p {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 20px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
   z-index: 9;
 }
-.registration .registration_main .main_body .btn-block::before {
+.registration .main_area .btn-block::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1453,30 +1723,128 @@ p {
   transition: inherit;
   pointer-events: none;
 }
-.registration .registration_main .main_body .btn-block:hover {
+.registration .main_area .btn-block:hover {
   background: transparent;
   border-color: transparent;
 }
-.registration .registration_main .main_body .btn-block:hover::before {
+.registration .main_area .btn-block:hover::before {
   width: 100%;
   background-color: #111111;
   opacity: 1;
 }
-.registration .dont_have_account {
+
+.registration_main {
+  border: 1px solid #c9c9c9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.registration_main .top_header {
+  background: #111111;
+  padding: 30px;
+}
+.registration_main .top_header .title {
+  font-size: 36px;
+  font-weight: 600;
+}
+.registration_main .main_body {
+  padding: 30px;
+}
+.registration_main .main_body .form-group {
+  margin-bottom: 8px;
+}
+.registration_main .main_body .form-group .form-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.registration_main .main_body .form-group small {
+  font-size: 13px;
+  font-weight: 500;
+}
+.registration_main .main_body .form-group .form-control {
+  height: 45px;
+  border: 1px solid #c9c9c9;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.registration_main .main_body .form-group .form-control:focus {
+  border-color: #111111;
+}
+.registration_main .main_body .form-group .textarea {
+  min-height: 120px;
+}
+.registration_main .main_body .form-group input[type=file] {
+  line-height: 31px;
+}
+.registration_main .main_body .form-group .input_field .eye_btn {
+  right: 15px;
+}
+.registration_main .main_body .form-group .input_field .eye_btn .show {
+  display: none;
+}
+.registration_main .main_body .form-group .error {
+  border-color: red;
+}
+.registration_main .main_body .btn-block {
+  position: relative;
+  color: #fff;
+  background-color: #111111;
+  border-color: #111111;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 9;
+}
+.registration_main .main_body .btn-block::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  bottom: -1px;
+  z-index: -1;
+  width: 50%;
+  background: inherit;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  border-radius: inherit;
+  -webkit-transition: inherit;
+  transition: inherit;
+  pointer-events: none;
+}
+.registration_main .main_body .btn-block:hover {
+  background: transparent;
+  border-color: transparent;
+}
+.registration_main .main_body .btn-block:hover::before {
+  width: 100%;
+  background-color: #111111;
+  opacity: 1;
+}
+
+.dont_have_account {
   padding: 8px 0;
 }
-.registration .dont_have_account a {
+.dont_have_account a {
   color: #111111;
   font-size: 14px;
   font-weight: 500;
 }
-.registration .dont_have_account a:hover {
+.dont_have_account a:hover {
   text-decoration: underline;
 }
-.registration .login_with {
+
+.login_with {
   padding: 10px 0 14px 0;
 }
-.registration .custom_login_btn {
+
+.custom_login_btn {
   padding: 12px 12px;
   width: 50%;
   color: #111111;
@@ -1486,11 +1854,13 @@ p {
   font-weight: 500;
   text-transform: uppercase;
 }
-.registration .facebook {
+
+.facebook {
   background: #0B5ED7;
   color: #ffffff;
 }
-.registration .google {
+
+.google {
   background: #DB412D;
   color: #ffffff;
 }
@@ -1528,8 +1898,7 @@ p {
 }
 
 .author_details .author_info {
-  background: #fff;
-  border: 1px solid #c9c9c9;
+  background: #f5f5f5;
   padding: 30px;
   border-radius: 10px;
 }
@@ -1540,6 +1909,11 @@ p {
 .author_details .author_info .text .title {
   font-size: 30px;
   font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .author_details .author_info .text .title {
+    font-size: 24px;
+  }
 }
 .author_details .author_info .text p {
   margin: 20px 0 10px 0;
@@ -1569,6 +1943,13 @@ p {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 40px;
+}
+.author_details .author_article .single_blog_item .text p {
+  margin-top: 10px;
+}
+.author_details .author_article .single_blog_item .blog_title a {
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .archive_section .archive_item {

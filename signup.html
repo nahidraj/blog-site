@@ -90,7 +90,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="categories.html">Categories</a></li>
         <li><a href="blog.html">Blogs</a></li>
-        <li><a href="author.html" class="active">Author</a></li>
+        <li><a href="author.html">Author</a></li>
         <li><a href="archive.html">Archive</a></li>
       </ul>
     </nav>
@@ -208,71 +208,100 @@
   <!-- header section end -->
   <!-- main area start -->
   <main>
-    <section class="registration d-flex align-items-center"
-      style="background: url(images/login-page-bg.jpg);">
+    <section class="registration d-flex align-items-center" style="background: url(images/login-bg.jpg);">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 mx-auto">
-            <div class="registration_main">
-              <div class="top_header text-center">
-                <h2 class="title text-white mb-2">Register Now</h2>
-                <p class="text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-              </div>
-              <div class="main_body">
-                <div class="row row-15 row-gutters-14">
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Your name</label>
-                      <input class="form-control shadow-none" type="text" placeholder="Enter your name">
+          <div class="col-lg-9 mx-auto">
+            <div class="main_area">
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="intro_box d-flex justify-content-center flex-column">
+                    <div class="logo mb-4">
+                      <img src="images/logo-new.png" alt="logo-new" width="160">
+                    </div>
+                    <p class="text-white">Login using social media to get quick access</p>
+                    <div class="login_other">
+                      <a href="#" class="fb"><i class="fab fa-facebook-f"></i> Signin with facebook</a>
+                      <a href="#" class="tw"><i class="fab fa-twitter"></i> Signin with twitter</a>
+                      <a href="#" class="gg"><i class="fab fa-google"></i> Signin with google</a>
+                      <a href="#" class="li"><i class="fab fa-linkedin-in"></i> Signin with linkedin</a>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Email</label>
-                      <input class="form-control shadow-none" type="email" placeholder="Enter your email">
+                </div>
+                <div class="col-lg-7">
+                  <div class="form_box">
+                    <div class="top_title text-center">
+                      <h3 class="title">Sign up for free!</h3>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Image</label>
-                      <input class="form-control shadow-none" type="file">
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Password <small class="text-danger mt-1 d-inline-block">( Password is
-                          Required )</small></label>
-                      <div class="input_field position-relative">
-                        <input class="form-control error shadow-none" type="password" placeholder="Enter your password">
-                        <button class="bg-transparent border-0 eye_btn position-absolute top-50 translate-middle-y">
-                          <i class="far fa-eye-slash hide"></i>
-                          <i class="far fa-eye show"></i>
-                        </button>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">Your name</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Enter your name">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">Email</label>
+                          <input class="form-control shadow-none" type="email" placeholder="Enter your email">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label">Image</label>
+                        <div class="custom_file_input d-flex align-items-center gap-3">
+                          <div class="img flex-shrink-0 position-relative">
+                            <img src="images/author-1.png" alt="avatar">
+                            <button class="close">
+                              <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                            </button>
+                          </div>
+                          <div class="form-group flex-grow-1">
+                            <input class="form-control shadow-none" type="file">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">Password <small class="text-danger mt-1 d-inline-block">( Password
+                              is
+                              Required )</small></label>
+                          <div class="input_field position-relative">
+                            <input class="form-control error shadow-none" type="password"
+                              placeholder="Enter your password">
+                            <button class="bg-transparent border-0 eye_btn position-absolute top-50 translate-middle-y">
+                              <i class="far fa-eye-slash hide"></i>
+                              <i class="far fa-eye show"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">Confirm Password <small class="text-danger mt-1 d-inline-block">(
+                              Confirm Password is Required )</small></label>
+                          <div class="input_field position-relative">
+                            <input class="form-control error shadow-none" type="password"
+                              placeholder="Enter confirm password">
+                            <button class="bg-transparent border-0 eye_btn position-absolute top-50 translate-middle-y">
+                              <i class="far fa-eye-slash hide"></i>
+                              <i class="far fa-eye show"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">Biography</label>
+                          <textarea class="form-control textarea shadow-none" placeholder="Write your bio"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 mt-2">
+                        <button class="btn btn-block btn-success">Sign up with email</button>
+                        <div class="text-center mt-3">
+                          <a href="login.html" class="login">Already have an account?</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Confirm Password <small class="text-danger mt-1 d-inline-block">(
-                          Confirm Password is Required )</small></label>
-                      <div class="input_field position-relative">
-                        <input class="form-control error shadow-none" type="password"
-                          placeholder="Enter confirm password">
-                        <button class="bg-transparent border-0 eye_btn position-absolute top-50 translate-middle-y">
-                          <i class="far fa-eye-slash hide"></i>
-                          <i class="far fa-eye show"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label class="form-label">Biography</label>
-                      <textarea class="form-control textarea shadow-none" placeholder="Write your bio"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <button class="btn btn-block btn-success">Register</button>
                   </div>
                 </div>
               </div>

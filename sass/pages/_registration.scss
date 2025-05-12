@@ -2,154 +2,419 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
-  padding: 120px 0;
+  padding: 60px 0;
 
-  .registration_main {
-    border: 1px solid $border;
-    border-radius: 14px;
-    overflow: hidden;
+  .main_area {
     background: $white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px 0px #1d2030;
 
-    .top_header {
-      background: $primary;
-      padding: 30px;
+    .intro_box {
+      background: #2B304C;
+      height: 100%;
+      padding: 80px 40px;
 
-      .title {
-        font-size: 36px;
-        font-weight: 600;
+      @media (max-width:991.98px) {
+        padding: 40px;
       }
-    }
 
-    .main_body {
-      padding: 30px;
+      @media (max-width:575.98px) {
+        padding: 24px;
+      }
 
-      .form-group {
-        margin-bottom: 8px;
+      p {
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
 
-        .form-label {
-          font-size: 13px;
-          font-weight: 600;
+      .login_other {
+        @media (max-width:991.98px) {
+          display: flex;
+          column-gap: 12px;
+          flex-wrap: wrap;
         }
 
-        small {
-          font-size: 13px;
-          font-weight: 500;
-        }
-
-        .form-control {
-          height: 45px;
-          border: 1px solid $border;
-          font-size: 15px;
+        a {
+          display: block;
+          width: 100%;
+          color: $white;
+          margin-bottom: 14px;
+          text-align: center;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 14px;
           font-weight: 400;
-          transition: $transition;
 
-          &:focus {
-            border-color: $black;
+          @media (max-width:991.98px) {
+            width: 49%;
           }
-        }
 
-        .textarea {
-          min-height: 120px;
-        }
+          @media (max-width:767.98px) {
+            width: 48.6%;
+          }
 
-        input[type="file"] {
-          line-height: 31px;
-        }
+          @media (max-width:575.98px) {
+            width: 100%;
+          }
 
-        .input_field {
-          .eye_btn {
-            right: 15px;
+          i {
+            margin-right: 5px;
+          }
 
-            .show {
-              display: none;
+          &.fb {
+            background: #1877F2;
+
+            &:hover {
+              background: #1165d3;
+            }
+          }
+
+          &.tw {
+            background: #1DA1F2;
+
+            &:hover {
+              background: #1484c9;
+            }
+          }
+
+          &.gg {
+            background: #DB4437;
+
+            &:hover {
+              background: #aa3328;
+            }
+          }
+
+          &.li {
+            background: #0072b1;
+
+            &:hover {
+              background: #005c8d;
             }
           }
         }
+      }
+    }
 
-        .error {
-          border-color: red;
+    .form_box {
+      padding: 40px;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      @media (max-width:991.98px) {
+        padding-left: 40px;
+      }
+
+      @media (max-width:575.98px) {
+        padding: 24px;
+      }
+
+      .top_title {
+        margin-bottom: 30px;
+
+        .title {
+          font-size: 26px;
+          font-weight: 600;
         }
       }
 
-      .btn-block {
-        position: relative;
-        color: #fff;
-        background-color: $primary;
-        border-color: $primary;
-        transition: .5s;
-        width: 100%;
-        font-size: 14px;
-        padding: 10px 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-        z-index: 9;
+      .custom_file_input {
+        .img {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          margin-bottom: 8px;
 
-        &::before {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: -1px;
-          bottom: -1px;
-          z-index: -1;
-          width: 50%;
-          background: inherit;
-          transform: translateX(-50%);
-          opacity: 0;
-          border-radius: inherit;
-          transition: inherit;
-          pointer-events: none;
-        }
-
-        &:hover {
-          background: transparent;
-          border-color: transparent;
-
-          &::before {
+          img {
             width: 100%;
-            background-color: $black;
-            opacity: 1;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+          }
+
+          .close {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            border: 0;
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            visibility: hidden;
+            opacity: 0;
+            transition: $transition;
+
+            svg {
+              stroke: #fff;
+            }
+          }
+
+          &:hover {
+            .close {
+              visibility: visible;
+              opacity: 1;
+            }
           }
         }
       }
+
+      .login {
+        color: $black;
+        text-align: center;
+        font-size: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
-  }
 
-  .dont_have_account {
-    padding: 8px 0;
+    .form-label {
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-    a {
-      color: $black;
-      font-size: 14px;
+    .form-group {
+      margin-bottom: 12px;
+
+
+      small {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .form-control {
+        height: 45px;
+        border: 1px solid $border;
+        font-size: 15px;
+        font-weight: 400;
+        transition: $transition;
+
+        &:focus {
+          border-color: $black;
+        }
+      }
+
+      .textarea {
+        min-height: 120px;
+      }
+
+      input[type="file"] {
+        line-height: 31px;
+      }
+
+      .input_field {
+        .eye_btn {
+          right: 15px;
+
+          .show {
+            display: none;
+          }
+        }
+      }
+
+      .error {
+        border-color: red;
+      }
+    }
+
+    .btn-block {
+      position: relative;
+      color: #fff;
+      background-color: $primary;
+      border-color: $primary;
+      transition: .5s;
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 20px;
       font-weight: 500;
+      letter-spacing: 1px;
+      z-index: 9;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -1px;
+        bottom: -1px;
+        z-index: -1;
+        width: 50%;
+        background: inherit;
+        transform: translateX(-50%);
+        opacity: 0;
+        border-radius: inherit;
+        transition: inherit;
+        pointer-events: none;
+      }
 
       &:hover {
-        text-decoration: underline;
+        background: transparent;
+        border-color: transparent;
+
+        &::before {
+          width: 100%;
+          background-color: $black;
+          opacity: 1;
+        }
       }
     }
   }
+}
 
-  .login_with {
-    padding: 10px 0 14px 0;
+
+.registration_main {
+  border: 1px solid $border;
+  border-radius: 14px;
+  overflow: hidden;
+  background: $white;
+
+  .top_header {
+    background: $primary;
+    padding: 30px;
+
+    .title {
+      font-size: 36px;
+      font-weight: 600;
+    }
   }
 
-  .custom_login_btn {
-    padding: 12px 12px;
-    width: 50%;
+  .main_body {
+    padding: 30px;
+
+    .form-group {
+      margin-bottom: 8px;
+
+      .form-label {
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      small {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .form-control {
+        height: 45px;
+        border: 1px solid $border;
+        font-size: 15px;
+        font-weight: 400;
+        transition: $transition;
+
+        &:focus {
+          border-color: $black;
+        }
+      }
+
+      .textarea {
+        min-height: 120px;
+      }
+
+      input[type="file"] {
+        line-height: 31px;
+      }
+
+      .input_field {
+        .eye_btn {
+          right: 15px;
+
+          .show {
+            display: none;
+          }
+        }
+      }
+
+      .error {
+        border-color: red;
+      }
+    }
+
+    .btn-block {
+      position: relative;
+      color: #fff;
+      background-color: $primary;
+      border-color: $primary;
+      transition: .5s;
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      z-index: 9;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -1px;
+        bottom: -1px;
+        z-index: -1;
+        width: 50%;
+        background: inherit;
+        transform: translateX(-50%);
+        opacity: 0;
+        border-radius: inherit;
+        transition: inherit;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background: transparent;
+        border-color: transparent;
+
+        &::before {
+          width: 100%;
+          background-color: $black;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.dont_have_account {
+  padding: 8px 0;
+
+  a {
     color: $black;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
-  }
 
-  .facebook {
-    background: #0B5ED7;
-    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+}
 
-  .google {
-    background: #DB412D;
-    color: $white;
-  }
+.login_with {
+  padding: 10px 0 14px 0;
+}
+
+.custom_login_btn {
+  padding: 12px 12px;
+  width: 50%;
+  color: $black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.facebook {
+  background: #0B5ED7;
+  color: $white;
+}
+
+.google {
+  background: #DB412D;
+  color: $white;
 }

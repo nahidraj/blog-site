@@ -68,6 +68,7 @@
 }
 
 .header_section {
+  border-bottom: 1px solid $border;
 
   nav {
     ul {
@@ -160,7 +161,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  left: -345px;
+  left: -385px;
   transition: $transition;
   z-index: 9999;
   height: 100vh;
@@ -170,7 +171,7 @@
 
   @media (max-width:1199.98px) {
     max-width: 300px;
-    left: -300px;
+    left: -380px;
   }
 
   .contact_info {

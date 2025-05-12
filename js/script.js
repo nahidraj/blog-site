@@ -2,11 +2,11 @@ $(function () {
   "use strict";
 
   // loader js
-  $(window).on("load", function () {
-    $(".fullpage_loader").fadeOut("slow", function () {
-      $(this).remove(1000);
-    });
-  });
+  // $(window).on("load", function () {
+  //   $(".fullpage_loader").fadeOut("slow", function () {
+  //     $(this).remove(1000);
+  //   });
+  // });
   
   $(".sidebar_btn").on("click", function () {
     $(".offcanvas_overlay, .offcanvas_section").addClass("show")
@@ -78,7 +78,6 @@ $(function () {
     dots: false,
     prevArrow: '<i class="fas fa-chevron-left arrow left"></i>',
     nextArrow: '<i class="fas fa-chevron-right arrow right"></i>',
-    
   })
 
   // banner blog slider js
