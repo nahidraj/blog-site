@@ -336,6 +336,7 @@
   .blog-comment {
     background-color: #f8f8f8;
     padding: 30px;
+    border-radius: 10px;
   }
 
   .comment_heading {
@@ -365,7 +366,15 @@
   .blog-comment .media {
     margin-bottom: 3px;
     background-color: #ffffff;
-    padding: 30px 35px 24px;
+    padding: 20px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .img {
+      width: 70px;
+      height: 70px;
+    }
+
     @media (max-width: 767px) {
       padding: 30px;
     }
@@ -388,6 +397,10 @@
 
   .blog-comment .media .media-body {
     position: relative;
+
+    p {
+      font-size: 14px;
+    }
   }
 
   .blog-comment .media .media-body .item-title {
@@ -408,13 +421,13 @@
   .blog-comment .media .media-body .item-btn {
     display: inline-block;
     font-size: 12px;
-    background-color: #f8f8f8;
+    background-color: $black;
     border-radius: 20px;
-    color: #646464;
+    color: $white;
     font-weight: 500;
     padding: 5px 20px;
     position: absolute;
-    top: -11px;
+    top: 0;
     right: 0;
     transition: 0.3s ease-in-out;
   }
@@ -427,13 +440,16 @@
   }
 
   .blog-comment .media .media-body .item-btn:hover {
-    background-color: #111111;
+    background-color: $color3;
     color: #ffffff;
   }
 
   .custom_blog_comment {
     li {
       margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
 
       .child {
         margin-left: 30px;
@@ -447,17 +463,45 @@
   }
 }
 
+.custom_blog_comment {
+  .blog_comment_box {
+    form {
+      padding-left: 30px;
+    }
+
+    .input-group {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: -37px;
+        left: 46px;
+        width: 25px;
+        height: 25px;
+        content: "";
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+      }
+    }
+  }
+}
+
 .blog_comment_box {
   .input-group {
+
     textarea {
       border: 1px solid $border;
       border-radius: 5px !important;
-      height: 180px;
+      height: 140px;
       padding: 20px;
       font-size: 16px;
       font-weight: 400;
       width: 100%;
-      &:focus{
+
+      &:focus {
         border-color: $black;
       }
     }
@@ -473,7 +517,8 @@
       padding: 16px 40px;
       border-radius: 5px !important;
       margin-top: 20px;
-      &:hover{
+
+      &:hover {
         background: $color3;
         color: $white;
       }

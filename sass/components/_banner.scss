@@ -18,6 +18,13 @@
   .single_blog_item {
     .img {
       margin-bottom: 0;
+      overflow: hidden;
+
+      .new_shape {
+        top: -1px;
+        right: -5px;
+        z-index: 9;
+      }
     }
 
     .text {
@@ -25,6 +32,12 @@
 
       @media (max-width: 991.98px) {
         margin-right: 0;
+      }
+    }
+
+    &:hover {
+      .new_img {
+        transform: scale(1) !important;
       }
     }
   }
